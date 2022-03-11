@@ -1,6 +1,4 @@
 #!/bin/sh
 
-detachAppObj CMS $1
-detachAppObj CMSRes $1
-
-ps -ef | grep 'python -m http.server' | awk '{print $2}' | xargs kill -9
+detachAppObj cms::main $1
+detachAppObj cms::media $1
